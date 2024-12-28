@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "MfGGgCx1nHw0VrRFtLqpvvvXXDUS+YDZrJl92G5K7Tw=",
+  "Source": "Recipe.Gateway",
+  "BasePath": "_content/Recipe.Gateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

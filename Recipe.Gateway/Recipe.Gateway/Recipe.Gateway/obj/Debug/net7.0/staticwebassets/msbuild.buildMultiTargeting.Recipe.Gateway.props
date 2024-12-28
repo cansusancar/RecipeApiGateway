@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Recipe.Gateway.props" />
+</Project>
