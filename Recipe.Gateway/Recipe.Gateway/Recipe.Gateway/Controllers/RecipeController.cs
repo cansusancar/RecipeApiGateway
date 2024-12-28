@@ -30,7 +30,7 @@ public class RecipeController : ControllerBase
         }
         catch (HttpRequestException ex)
         {
-            Console.WriteLine("Inner Exception: " + ex.InnerException?.Message);
+            Console.WriteLine("inner exception: " + ex.InnerException?.Message);
             return BadRequest(ex.Message);
         }
     }
@@ -46,7 +46,7 @@ public class RecipeController : ControllerBase
         }
         catch (HttpRequestException ex)
         {
-            Console.WriteLine("Inner Exception: " + ex.InnerException?.Message);
+            Console.WriteLine("inner exception: " + ex.InnerException?.Message);
             return BadRequest(ex.Message);
         }
     }
@@ -56,7 +56,7 @@ public class RecipeController : ControllerBase
     {
         if (recipeViewModel == null)
         {
-            return BadRequest("Invalid data in recipeViewModel.");
+            return BadRequest("invalid data in recipeviewmodel.");
         }
 
         try
@@ -70,11 +70,11 @@ public class RecipeController : ControllerBase
             }
 
             // Oluşturma işlemi başarısız olduysa, uygun bir hata mesajı dön
-            return BadRequest("Recipe creation failed."); // veya başka bir hata mesajı
+            return BadRequest("recipe creation failed."); // veya başka bir hata mesajı
         }
         catch (HttpRequestException ex)
         {
-            Console.WriteLine("Inner Exception: " + ex.InnerException?.Message);
+            Console.WriteLine("inner exception: " + ex.InnerException?.Message);
             return BadRequest(ex.Message);
         }
     }
@@ -89,7 +89,7 @@ public class RecipeController : ControllerBase
             if (recipeRecipeViewModel == null)
             {
                 // Mapper dönüşümü sırasında hata oluştu, işlem başarısız.
-                return BadRequest("Invalid data in recipeViewModel."); // veya başka bir hata mesajı
+                return BadRequest("invalid data in recipeviewmodel."); // veya başka bir hata mesajı
             }
 
             var responseBody = await _recipeService.UpdateRecipe(recipeRecipeViewModel);
@@ -100,13 +100,13 @@ public class RecipeController : ControllerBase
             }
 
             // Oluşturma işlemi başarısız olduysa, uygun bir hata mesajı dön
-            return BadRequest("Recipe creation failed."); // veya başka bir hata mesajı
+            return BadRequest("recipe creation failed."); // veya başka bir hata mesajı
 
             // var updateRecipeDataModel = _mapper.Map<UpdateDataModel>(recipeViewModel);
         }
         catch (HttpRequestException ex)
         {
-            Console.WriteLine("Inner Exception: " + ex.InnerException?.Message);
+            Console.WriteLine("inner exception: " + ex.InnerException?.Message);
             return BadRequest(ex.Message);
         }
     }
@@ -121,7 +121,7 @@ public class RecipeController : ControllerBase
         }
         catch (HttpRequestException ex)
         {
-            Console.WriteLine("Inner Exception: " + ex.InnerException?.Message);
+            Console.WriteLine("inner exception: " + ex.InnerException?.Message);
             return BadRequest(ex.Message);
         }
     }

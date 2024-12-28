@@ -3582,11 +3582,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Downloads\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\RiderProjects\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway.csproj",
       "projectName": "Recipe.Gateway",
-      "projectPath": "C:\\Users\\Lenovo\\Downloads\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\RiderProjects\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Downloads\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\RiderProjects\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"

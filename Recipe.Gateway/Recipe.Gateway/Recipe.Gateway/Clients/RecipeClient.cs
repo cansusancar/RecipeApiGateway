@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Newtonsoft.Json;
 using Recipe.Gateway.Business.Model;
 using Recipe.Gateway.Client.Models;
@@ -89,7 +90,7 @@ public class RecipeClient : IRecipeClient
         }
     }
 
-    public async Task<ClientModel> UpdateRecipeAsync(UpdateRecipeViewModel recipe)//neden controllerdakini direkt buraya aktardık mapper olmadan??
+    public async Task<bool> UpdateRecipeAsync(UpdateRecipeViewModel recipe)//neden controllerdakini direkt buraya aktardık mapper olmadan??
     {//bu mtodun parametresiyle apideki controllerda aynı metodun parametresinin türü eşleşmeli: bunu api dökomantasyonundan alıyoruz
         var url = "api/v1.0/recipes/";
         try
@@ -97,9 +98,10 @@ public class RecipeClient : IRecipeClient
             var response = await _httpClient.PutJsonAsync(url, recipe);
             if (response.IsSuccessStatusCode)
             {
-                var responseBody = await response.Content.ReadAsStringAsync();
-                var updatedRecipe = JsonConvert.DeserializeObject<ClientModel>(responseBody);
-                return updatedRecipe;
+              //  var responseBody = await response.Content.ReadAsStringAsync();
+               // var updatedRecipe = JsonConvert.DeserializeObject<ClientModel>(responseBody);
+               return true; // return updatedRecipe;
+
             }
 
             var errorMessage = await response.Content.ReadAsStringAsync();
@@ -108,22 +110,26 @@ public class RecipeClient : IRecipeClient
         }
         catch (HttpRequestException ex)
         {
+            Console.WriteLine("Error: " + ex.Message);
             Console.WriteLine("Inner Exception: " + ex.InnerException?.Message);
             throw;
         }
+
     }
 
-    public async Task<ClientModel> DeleteRecipeAsync(int id)
+    public async Task<bool> DeleteRecipeAsync(int id)
     {
-        var apiUrl = id.ToString();
+        var apiUrl = $"api/v1.0/recipes/{id}";
+       // var apiUrl = id.ToString();
         try
         {
             var response = await _httpClient.DeleteAsync(apiUrl);
             if (response.IsSuccessStatusCode)
             {
-                var responseBody = await response.Content.ReadAsStringAsync();
-                var deletedRecipe = JsonConvert.DeserializeObject<ClientModel>(responseBody);
-                return deletedRecipe;
+              //  var responseBody = await response.Content.ReadAsStringAsync();
+              //  var deletedRecipe = JsonConvert.DeserializeObject<ClientModel>(responseBody);
+              //  return deletedRecipe;
+              return true;
             }
 
             throw new HttpRequestException($"API request failed with status code: {response.StatusCode}");

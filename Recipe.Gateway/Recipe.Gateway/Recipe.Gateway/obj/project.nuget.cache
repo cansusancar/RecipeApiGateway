@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WRxUbCLO5Es8MBf/YEnSSQ6/m7hwZHuMzMqH4wpCBiFQamDydVlcwA6eNPf0qLupP6eAKqVbCQAEpoFSDwJjWA==",
+  "dgSpecHash": "FL19zuKA+jofw2N/se93xx43ndKl58mZ4bt7NfY0D4ZxeOXEfc9xxEXrkjcv4p6Bzc9ES0OPhZ/rfxw4eOGc8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Downloads\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\RiderProjects\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway\\Recipe.Gateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.16\\microsoft.aspnetcore.openapi.7.0.16.nupkg.sha512",
